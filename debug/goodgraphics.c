@@ -13,7 +13,7 @@ typedef struct Point{
   float ord;
   float alt;
 }POINT;
-okok
+
  /*
  The structure vector is defined by :
   - its coordinates in the world frame
