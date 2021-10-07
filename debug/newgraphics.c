@@ -221,7 +221,7 @@ int main(int argc, char **argv){
 
         float vect_OM[3];
 
-        POINT point_M;
+        float point_M[3];
         vect_OM[0] = point_M[0] = camera_coordinates[0];
         vect_OM[1] = point_M[1] = camera_coordinates[1];
         vect_OM[2] = point_M[2] = camera_coordinates[2];
@@ -231,9 +231,9 @@ int main(int argc, char **argv){
 
         float e_u[3];
 
-        float e_v[3]
+        float e_v[3];
 
-        float e_w[3]
+        float e_w[3];
         float view_mat[3][4];
 
         e_u[0] = view_mat[0][0] = (point_M[2])/d_g;
@@ -257,7 +257,7 @@ int main(int argc, char **argv){
         float r = hw[1]/hw[0];
         float S_y = 1/tan(theta_y/2);
         float S_x = S_y/r;
-        float projection_mat[3][4] = malloc(3*sizeof(float*));
+        float projection_mat[3][4];
 
 
         float k = (nf[0] - nf[1])/(2*nf[0]*nf[1]);
@@ -278,6 +278,8 @@ int main(int argc, char **argv){
 
 
         float vectorProduct[3];
+        float vect_AB[3];
+        float vect_AC[3];
         //printf("AVANT LA BOUCLE\n");
         for(size_t i = 0; i < nb_triangles; i++){
           /*-------Shading parameter and normal-------*/
